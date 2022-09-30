@@ -1,0 +1,30 @@
+.divOne {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 35px;
+}
+
+.divText {
+  background-color: #1f1f1f;
+  width: 80%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.input-text {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #bb86fc;
+  height: 30px;
+  padding: 10px;
+  width: 80%;
+  color: #e1e1e1;
+}
