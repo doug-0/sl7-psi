@@ -1,12 +1,19 @@
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { changeMyTyping } from '../../redux/slice';
 import './firstDiv.css';
 
 export default function FirstDiv(): JSX.Element {
   const [myTyping, setMyTyping] = useState<string>('...');
+  const dispatchTyping = useDispatch();
 
   const checkMyTyping = (typing: string): void => {
-    if (!typing) return setMyTyping('...');
+    if (!typing) {
+      dispatchTyping(changeMyTyping('...'));
+      return setMyTyping('...')
+    };
 
+    dispatchTyping(changeMyTyping(typing));
     return setMyTyping(typing);
   };
 
